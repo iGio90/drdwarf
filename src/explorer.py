@@ -85,7 +85,6 @@ class Explorer(QWidget):
         glbl_pt = self.explorer.mapToGlobal(pos)
         if row != -1:
             context_menu = QMenu(self)
-            size = int(self.explorer_model.item(row, 3).text())
             name = self.explorer_model.item(row, 5).text()
             context_menu.addAction('pull file', lambda: self._on_pull_file(name))
             context_menu.exec_(glbl_pt)

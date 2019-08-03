@@ -53,8 +53,6 @@ class Plugin(QObject):
                 self.app.panels_menu.addSeparator()
                 self.app.panels_menu.addAction('Android explorer', self.create_widget)
 
-                self.create_widget()
-
     def create_widget(self):
         if self.explorer is None:
             self.explorer = Explorer(self)
